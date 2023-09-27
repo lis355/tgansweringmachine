@@ -1,0 +1,16 @@
+{
+	"name": "tgansweringmachine",
+	"version": "1.0.0",
+	"main": "main.js",
+	"license": "MIT",
+	"type": "commonjs",
+	"dependencies": {
+		"dotenv-flow": "^3.3.0",
+		"input": "^1.0.1",
+		"telegram": "^2.18.38"
+	},
+	"devDependencies": {
+		"eslint": "^8.49.0",
+		"eslint-config-protop": "^1.0.0"
+	}
+}
