@@ -5,14 +5,53 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"name": "start",
 			"type": "node",
 			"request": "launch",
-			"name": "start",
 			"skipFiles": [
 				"<node_internals>/**"
 			],
-			"program": "${workspaceFolder}/main.js",
-			"console": "integratedTerminal"
+			"program": "${workspaceFolder}/start.js",
+			"console": "integratedTerminal",
+			"env": {
+				"DEVELOP": "true"
+			}
+		},
+		{
+			"name": "authorize-telegram-client",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/start.js",
+			"console": "integratedTerminal",
+			"env": {
+				"DEVELOP": "true"
+			},
+			"args": [
+				"--auth"
+			]
+		},
+		{
+			"name": "service-windows-install",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/service/windows/serviceInstall.js",
+			"cwd": "${workspaceFolder}/service/windows/"
+		},
+		{
+			"name": "service-windows-uninstall",
+			"type": "node",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"program": "${workspaceFolder}/service/windows/serviceUninstall.js",
+			"cwd": "${workspaceFolder}/service/windows/"
 		}
 	]
 }
